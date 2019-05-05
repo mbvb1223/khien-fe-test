@@ -10,32 +10,32 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public username: string;
   public password: string;
-  private defaultLink = '/post/list';
+  private defaultLink = '/posts/list';
 
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router
   ) {
     if (this.authenticationService.currentUserValue) {
-			this.router.navigate([this.defaultLink]);
-		}
-	}
+      this.router.navigate([this.defaultLink]);
+    }
+  }
 
   ngOnInit() {
   }
 
   public login(): void {
-  	if (!this.username || !this.password) {
-  		alert('Please fill your UserName/Password!');
+    if (!this.username || !this.password) {
+      alert('Please fill your UserName/Password!');
 
-  		return;
-		}
+      return;
+    }
 
     this.authenticationService.login(this.username, this.password).subscribe(
       () => {
-      	alert('Done!');
-				this.router.navigate([this.defaultLink]);
-			},
+        alert('Done!');
+        this.router.navigate([this.defaultLink]);
+      },
       () => alert('Error!')
     );
   }

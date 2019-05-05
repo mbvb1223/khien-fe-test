@@ -11,6 +11,11 @@
       mat-raised-button color="primary">Go to Login page</button>
 
   <button
+      routerLink="/login"
+      *ngIf="authenticationService.currentUserValue && router.url.endsWith('/')"
+      mat-raised-button color="primary">Go to Posts page</button>
+
+  <button
       (click)="logout()"
       *ngIf="!!authenticationService.currentUserValue"
       mat-raised-button color="accent">Logout</button>

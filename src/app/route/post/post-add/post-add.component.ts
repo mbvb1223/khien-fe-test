@@ -21,6 +21,12 @@ export class PostAddComponent implements OnInit {
   }
 
   public create(): void {
+    if (!this.title) {
+      alert('Error! Please fill the title');
+
+      return;
+    }
+
     this.postService.create({title: this.title, content: this.content});
 
     this.router.navigate(['posts/list']);

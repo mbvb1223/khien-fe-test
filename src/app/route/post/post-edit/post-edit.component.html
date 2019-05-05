@@ -1,10 +1,12 @@
 <div class="post-edit" *ngIf="post">
-  <mat-form-field appearance="outline" class="login__username">
+  <h2 class="post-edit__title">Edit Post</h2>
+
+  <mat-form-field appearance="outline">
     <mat-label>Title</mat-label>
-    <input matInput placeholder="Username" [(ngModel)]="post.title">
+    <input matInput placeholder="Title" [(ngModel)]="post.title">
   </mat-form-field>
 
-  <mat-form-field appearance="outline" class="login__password">
+  <mat-form-field appearance="outline">
     <mat-label>Content</mat-label>
     <textarea matInput placeholder="Content" [(ngModel)]="post.content"></textarea>
   </mat-form-field>

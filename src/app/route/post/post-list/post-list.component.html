@@ -1,5 +1,5 @@
 <div class="post-list">
-  <h2 style="text-align: center">Posts</h2>
+  <h2 style="text-align: center">List Posts</h2>
 
   <div class="post-list__create-action">
     <button mat-raised-button routerLink="/posts/add">Create a new Post</button>
@@ -13,5 +13,4 @@
   <div *ngFor="let post of posts">
     <app-post-item [post]="post"></app-post-item>
   </div>
-
 </div>

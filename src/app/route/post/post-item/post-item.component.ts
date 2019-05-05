@@ -21,6 +21,11 @@ export class PostItemComponent implements OnInit {
   }
 
   public delete(postId: string): void {
+    const confirm = window.confirm('Are you sure?');
+    if (!confirm) {
+     return;
+    }
+
     this.postService.deleteById(postId);
 
     this.router.navigate(['posts/list']);

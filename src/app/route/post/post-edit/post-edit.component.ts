@@ -27,6 +27,12 @@ export class PostEditComponent implements OnInit {
   }
 
   public save(): void {
+    if (!this.post.title) {
+      alert('Title can not be empty');
+
+      return;
+    }
+
     this.postService.save(this.post.id, this.post);
     this.router.navigate(['posts/list']);
   }
