@@ -5,6 +5,7 @@ import { LoginComponent } from './core/component/login/login.component';
 import { PostListComponent } from './route/post/post-list/post-list.component';
 import { PostAddComponent } from './route/post/post-add/post-add.component';
 import { PostEditComponent } from './route/post/post-edit/post-edit.component';
+import { AuthGuard } from './core/guard/authentication.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'post/list',
-    component: PostListComponent
+    component: PostListComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'post/add',
