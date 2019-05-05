@@ -12,10 +12,10 @@ export class AppComponent {
 
   public constructor(
     public authenticationService: AuthenticationService,
-    private router: Router
+    public router: Router
   ) {
-
   }
+
   public logout(): void {
     this.authenticationService.logout();
     this.router.navigate(['/']);

@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public username: string;
   public password: string;
-
   private defaultLink = '/post/list';
 
   constructor(
@@ -26,6 +25,12 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
+  	if (!this.username || !this.password) {
+  		alert('Please fill your UserName/Password!');
+
+  		return;
+		}
+
     this.authenticationService.login(this.username, this.password).subscribe(
       () => {
       	alert('Done!');
