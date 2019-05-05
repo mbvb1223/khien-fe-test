@@ -18,12 +18,14 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'posts/add',
-    component: PostAddComponent
+    path: 'posts/create',
+    component: PostAddComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'posts/edit/:id',
-    component: PostEditComponent
+    component: PostEditComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

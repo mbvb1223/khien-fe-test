@@ -12,9 +12,7 @@ export class PostService {
     {id: '2', title: 'title-2', content: 'content 2'},
   ];
 
-  constructor() { }
-
-  getAll(): Array<PostModel> {
+  public getAll(): Array<PostModel> {
     return this.posts;
   }
 

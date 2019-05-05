@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,6 @@ import { PostAddComponent } from './route/post/post-add/post-add.component';
 import { PostEditComponent } from './route/post/post-edit/post-edit.component';
 import { SharedModule } from './share/share.module';
 import { FakeBackendInterceptor } from './core/interceptor/fakebackend.interceptor';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

@@ -23,6 +23,11 @@ export class PostEditComponent implements OnInit {
     this.activatedRoute.paramMap
       .subscribe(params => {
         this.post = cloneDeep(this.postService.getById(params.get('id')));
+
+        if (!this.post) {
+          alert('Error! Post is not existing');
+          this.router.navigate(['posts/list']);
+        }
       });
   }
 
