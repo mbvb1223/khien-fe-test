@@ -1,19 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1 routerLink="/">
-    Welcome to {{ title }}!
-  </h1>
+<div class="app">
+  <div style="text-align:center">
+    <h1 routerLink="/" class="app__title">
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+
+  <button
+      routerLink="/login"
+      *ngIf="!authenticationService.currentUserValue && !router.url.endsWith('/login')"
+      mat-raised-button color="primary">Go to Login page</button>
+
+  <button
+      (click)="logout()"
+      *ngIf="!!authenticationService.currentUserValue"
+      mat-raised-button color="accent">Logout</button>
+  <hr />
+
+  <router-outlet></router-outlet>
+
 </div>
-
-<button
-    routerLink="/login"
-    *ngIf="!authenticationService.currentUserValue && !router.url.endsWith('/login')"
-    mat-raised-button color="primary">Go to Login page</button>
-
-<button
-    (click)="logout()"
-    *ngIf="!!authenticationService.currentUserValue"
-    mat-raised-button color="accent">Logout</button>
-<hr />
-
-<router-outlet></router-outlet>
