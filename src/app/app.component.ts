@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './core/service/authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app: Khien-FE-test';
+
+  public constructor(
+    public authenticationService: AuthenticationService,
+    public router: Router
+  ) {
+  }
+
+  public logout(): void {
+    this.authenticationService.logout();
+    this.router.navigate(['/']);
+  }
 }
