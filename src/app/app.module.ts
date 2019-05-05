@@ -14,7 +14,6 @@ import { SharedModule } from './share/share.module';
 import { FakeBackendInterceptor } from './core/interceptor/fakebackend.interceptor';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -12,6 +12,7 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) {
     this.currentUserSubject.asObservable().subscribe((userData: UserModel) => this.currentUser = userData);
+    this.currentUserSubject.next(JSON.parse(localStorage.getItem('currentUser')));
   }
 
   public get currentUserValue(): UserModel {
