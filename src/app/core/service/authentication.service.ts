@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { UserModel } from './user.model';
+import { UserModel } from '../model/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {

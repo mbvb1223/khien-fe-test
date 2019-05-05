@@ -13,17 +13,19 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'post/list',
+    path: 'posts/list',
     component: PostListComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'post/add',
-    component: PostAddComponent
+    path: 'posts/create',
+    component: PostAddComponent,
+    canActivate: [AuthGuard]
   },
   {
-    path: 'post/edit/:id',
-    component: PostEditComponent
+    path: 'posts/edit/:id',
+    component: PostEditComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

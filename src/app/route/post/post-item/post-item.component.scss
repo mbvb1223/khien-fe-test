@@ -1,0 +1,9 @@
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+
+  &__edit-action, &__delete-action {
+    margin: 0 5px;
+  }
+}
