@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Demo online: https://khien-fe-test.firebaseapp.com/
 - CI: https://circleci.com/gh/mbvb1223/khien-fe-test
 - Git: https://github.com/mbvb1223/khien-fe-test
+- Video demo: https://youtu.be/MMb9IgChcfA
 
 ## Development server
 
