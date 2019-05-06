@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
+- Demo online: https://khien-fe-test.firebaseapp.com/
+- CI: https://circleci.com/gh/mbvb1223/khien-fe-test
+- Git: https://github.com/mbvb1223/khien-fe-test
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
