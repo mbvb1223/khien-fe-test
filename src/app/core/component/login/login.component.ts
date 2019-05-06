@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public username: string;
   public password: string;
-  private defaultLink = '/posts/list';
+  private defaultLink = 'posts/list';
 
   constructor(
     private authenticationService: AuthenticationService,
