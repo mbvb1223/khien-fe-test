@@ -1,0 +1,12 @@
+<div class="post-item" *ngIf="post">
+  <div>
+    {{ post.id }}
+  </div>
+  <div>
+    {{ post.title }}
+  </div>
+  <div>
+    <button mat-raised-button color="primary" class="post-item__edit-action" routerLink="/posts/edit/{{ post.id }}">Edit</button>
+    <button mat-raised-button color="warn" class="post-item__delete-action" (click)="delete(post.id)">Delete</button>
+  </div>
+</div>
